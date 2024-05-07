@@ -454,7 +454,7 @@ app.post("/auth/signup", (req, res) => {
 app.post("/delete/user", verify_login((req, res, user) => {
 	const { id } = req.query;
 	if (!user) res.sendStatus(401); // not logged in
-	else if (!user.admin && user.id !== id) res.sendStatus(403); // not allowed to delete this user
+	else if (!user.admin && user.id !== +id) res.sendStatus(403); // not allowed to delete this user
 	else db.query("DELETE FROM users WHERE id = :userId", { userId: id }, err => {
 		if (!err) res.sendStatus(200);
 		else internal_error(res)(err);
