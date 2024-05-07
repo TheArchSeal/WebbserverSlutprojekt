@@ -11,3 +11,5 @@ DROP TABLE comments;
 DROP TABLE ratings;
 DROP TABLE levels;
 DROP TABLE users;
+
+UPDATE users SET admin = TRUE WHERE id = 1;

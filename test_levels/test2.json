@@ -33,7 +33,7 @@
 					["brick", 29, -1, 2, 30],
 					["brick", 1, 29, 30, 2],
 
-					["spike", 4, 28, 2, 1]
+					["spike", 4, 28, 2, 1, true, true, true, true, true, 0.5]
 				],
 				[],
 				[
